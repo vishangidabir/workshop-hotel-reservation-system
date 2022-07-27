@@ -24,9 +24,8 @@ public class HotelDetails {
 
     public void findCheapestHotelOne(String startDateRange, String endDateRange) {
 
-        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-
+        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
         int numberOfDays = endDate.getDayOfMonth() - startDate.getDayOfMonth() + 1;
 
         Optional<Hotel> cheapestHotel = this.myHotelList.stream().sorted(Comparator.comparing(Hotel::getWeekdayRegularRate)).findFirst();
@@ -41,8 +40,8 @@ public class HotelDetails {
 
     public void findCheapestHotelTwo(String startDateRange, String endDateRange) {
 
-        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
 
         int numberOfDays = endDate.getDayOfMonth() - startDate.getDayOfMonth() + 1;
 
@@ -52,15 +51,15 @@ public class HotelDetails {
         hotel.setHotelName(cheapestHotel.get().getHotelName());
         hotel.setTotal(cheapestHotel.get().getWeekendRegularRate() * numberOfDays);
 
-        System.out.println("HotelName :" + hotel.getHotelName());
+        System.out.println("Hotel Name :" + hotel.getHotelName());
         System.out.println("Number Of Days Stayed Weekend Regular Rate :" + hotel.getTotal() + "$");
 
     }
 
     public void findCheapestHotelRating(String startDateRange, String endDateRange) {
 
-        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
-        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("dd-MM-yyyy"));
+        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
+        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("dd-MMM-yyyy"));
 
         int numberOfDays = endDate.getDayOfMonth() - startDate.getDayOfMonth() + 1;
         Optional<Hotel> cheapestHotel = this.myHotelList.stream().sorted(Comparator.comparing(Hotel::getWeekendRegularRate)).findFirst();
@@ -69,9 +68,9 @@ public class HotelDetails {
         hotel.setHotelName(cheapestHotel.get().getHotelName());
         hotel.setTotal(cheapestHotel.get().getWeekendRegularRate() * numberOfDays);
         hotel.setRating(cheapestHotel.get().getRating());
-
-        System.out.println("HotelName :" + hotel.getHotelName());
-        System.out.println("Rating :" + hotel.getRating());
+        System.out.println("Hotel Name :" + hotel.getHotelName());
+        System.out.println("Number Of Days Stayed * Weekend Regular Rate :" + hotel.getTotal() + "$");
+        System.out.println("Raiting :" + hotel.getRating());
 
     }
 }

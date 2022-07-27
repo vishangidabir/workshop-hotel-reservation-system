@@ -87,7 +87,7 @@ public class Hotel {
 
     @Override
     public String toString() {
-        return "\n~~Hotel~~{" +
+        return "Hotel{" +
                 "\nhotelName='" + hotelName + '\'' +
                 ", weekdayRegularRate=" + weekdayRegularRate +
                 ", weekendRegularRate=" + weekendRegularRate +

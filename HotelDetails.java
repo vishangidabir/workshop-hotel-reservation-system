@@ -34,8 +34,8 @@ public class HotelDetails {
         Hotel hotel = new Hotel();
         hotel.setHotelName(cheapestHotel.get().getHotelName());
         hotel.setTotal(cheapestHotel.get().getWeekdayRegularRate() * numberOfDays);
-        System.out.println("HotelName :" + hotel.getHotelName());
-        System.out.println("NumberOfDaysStayed  WeekdayRegularRate :" + hotel.getTotal() + "$");
+        System.out.println("Hotel Name :" + hotel.getHotelName());
+        System.out.println("Number Of Days Stayed Weekday Regular Rate :" + hotel.getTotal() + "$");
 
     }
 }

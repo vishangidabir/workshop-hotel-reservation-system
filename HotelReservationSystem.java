@@ -10,5 +10,9 @@ public class HotelReservationSystem {
         System.out.println("Cheapest Hotel Based on Weekday Regular Rate");
         hotelDetails.findCheapestHotelOne("10-Sep-2020", "11-Sep-2020");
         System.out.println(" ");
+
+        System.out.println("Cheapest Hotel Based on Weekday Regular Rate");
+        hotelDetails.findCheapestHotelTwo("11-Sep-2020", "12-Sep-2020");
+        System.out.println(" ");
     }
 }

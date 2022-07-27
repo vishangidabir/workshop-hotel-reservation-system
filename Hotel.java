@@ -95,5 +95,6 @@ public class Hotel {
                 ", weekendRewardRate=" + weekendRewardRate +
                 ", rating=" + rating +
                 '}';
+
     }
 }

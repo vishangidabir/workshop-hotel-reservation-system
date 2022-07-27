@@ -17,4 +17,5 @@ public class HotelDetails {
 
         System.out.println(myHotelList);
     }
+
 }

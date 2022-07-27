@@ -6,4 +6,5 @@ public class HotelReservationSystem {
         HotelDetails hotelDetails = new HotelDetails();
         hotelDetails.addHotel();
     }
+
 }

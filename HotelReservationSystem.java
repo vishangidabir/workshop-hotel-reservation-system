@@ -18,6 +18,11 @@ public class HotelReservationSystem {
         System.out.println("Cheapest best Rated Hotel Based on WeekendRegularRate");
         hotelDetails.findCheapestHotelRating("11-Sep-2020", "12-Sep-2020");
         System.out.println(" ");
+
+        System.out.println(" ");
+        System.out.println("Cheapest best Rated Hotel Based on WeekendRewardRate");
+        hotelDetails.findCheapestHotelRaitingForReward("11-Sep-2020", "12-Sep-2020");
+        System.out.println(" ");
     }
 
 }

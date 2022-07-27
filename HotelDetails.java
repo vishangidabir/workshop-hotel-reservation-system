@@ -73,4 +73,23 @@ public class HotelDetails {
         System.out.println("Raiting :" + hotel.getRating());
 
     }
+
+    public void findCheapestHotelRaitingForReward(String startDateRange, String endDateRange) {
+        LocalDate startDate = LocalDate.parse(startDateRange, DateTimeFormatter.ofPattern("d-MMM-yyyy"));
+        LocalDate endDate = LocalDate.parse(endDateRange, DateTimeFormatter.ofPattern("d-MMM-yyyy"));
+
+        int numberOfDays = endDate.getDayOfMonth() - startDate.getDayOfMonth() + 1;
+
+        Optional<Hotel> cheapestHotel = this.myHotelList.stream().sorted(Comparator.comparing(Hotel::getWeekendRewardRate)).findFirst();
+
+        Hotel hotel = new Hotel();
+        hotel.setHotelName(cheapestHotel.get().getHotelName());
+        hotel.setTotal(cheapestHotel.get().getWeekendRewardRate() * numberOfDays);
+        hotel.setRating(cheapestHotel.get().getRating());
+
+        System.out.println("HotelName :" + hotel.getHotelName());
+        System.out.println("NumberOfDaysStayed * WeekendRewardRate :" + hotel.getTotal() + "$");
+        System.out.println("Raiting :" + hotel.getRating());
+        
+    }
 }

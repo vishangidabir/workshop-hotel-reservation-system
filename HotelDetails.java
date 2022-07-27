@@ -56,5 +56,4 @@ public class HotelDetails {
         System.out.println("Number Of Days Stayed Weekend Regular Rate :" + hotel.getTotal() + "$");
 
     }
-    
 }

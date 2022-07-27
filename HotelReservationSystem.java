@@ -15,5 +15,4 @@ public class HotelReservationSystem {
         hotelDetails.findCheapestHotelTwo("11-Sep-2020", "12-Sep-2020");
         System.out.println(" ");
     }
-
 }
